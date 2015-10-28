@@ -1,16 +1,11 @@
-#include "opencv2/opencv.hpp"
+#include "part1.1/ReadImage.h"
 #include <iostream>
-#include <ctype.h>
 
-using namespace cv;
 using namespace std;
 
-Mat image;
-int trackObject = 0;
-Rect selection;
-
-int main()
-{
+int main() {
+  ReadImage part_one("data/test.jpg");
+  part_one.Show();
 
   return 0;
 }

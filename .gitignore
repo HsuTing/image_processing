@@ -1,0 +1,6 @@
+*.swp
+*.o
+opencv
+build
+*log
+.DS_Store
