@@ -2,8 +2,8 @@
 compiler = g++
 extraLib = -I/usr/local/include/
 extraMod = -L/usr/local/lib/
-mods = -lopencv_core -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
-libs = ReadImage.o DrawFrame.o Drawing.o
+mods = -lopencv_core -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc -lopencv_videoio
+libs = ReadImage.o DrawFrame.o Drawing.o ReadVideo.o
 
 #start
 all: $(libs) main.cpp
@@ -20,6 +20,10 @@ DrawFrame.o: part1.2/DrawFrame.cpp part1.2/DrawFrame.h
 #part1.3
 Drawing.o: part1.3/Drawing.cpp part1.3/Drawing.h
 	$(compiler) -c part1.3/Drawing.cpp $(extraLib)
+
+#part2.1
+ReadVideo.o: part2.1/ReadVideo.cpp part2.1/ReadVideo.h
+	$(compiler) -c part2.1/ReadVideo.cpp $(extraLib)
 
 clean:
 	rm *.o

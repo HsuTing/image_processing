@@ -2,6 +2,8 @@
 
 DrawFrame::DrawFrame(Mat img) {
   img.copyTo(image);
+  start = Point(0, 0);
+  end = Point(1, 1);
 
   if(!image.data) {                              // Check for invalid input
     cout <<  "Could not open or find the image." << endl;
