@@ -3,7 +3,7 @@ compiler = g++
 extraLib = -I/usr/local/include/
 extraMod = -L/usr/local/lib/
 mods = -lopencv_core -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc -lopencv_videoio
-libs = ReadImage.o DrawFrame.o Drawing.o ReadVideo.o
+libs = ReadImage.o DrawFrame.o Drawing.o ReadVideo.o ShowVideoTime.o
 
 #start
 all: $(libs) main.cpp
@@ -24,6 +24,10 @@ Drawing.o: part1.3/Drawing.cpp part1.3/Drawing.h
 #part2.1
 ReadVideo.o: part2.1/ReadVideo.cpp part2.1/ReadVideo.h
 	$(compiler) -c part2.1/ReadVideo.cpp $(extraLib)
+
+#part2.2
+ShowVideoTime.o: part2.2/ShowVideoTime.cpp part2.2/ShowVideoTime.h
+	$(compiler) -c part2.2/ShowVideoTime.cpp $(extraLib)
 
 clean:
 	rm *.o
