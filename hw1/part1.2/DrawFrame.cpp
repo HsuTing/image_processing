@@ -10,7 +10,7 @@ DrawFrame::DrawFrame(Mat img) {
 
   namedWindow("part1.2", WINDOW_AUTOSIZE);       // Create a window for display.
   imshow("part1.2", image);                      // Show our image inside it.
-  setMouseCallback("part1.2", onMouse, this);       // bind mouse event
+  setMouseCallback("part1.2", onMouse, this);    // bind mouse event
 
   waitKey(0);                                    // Wait for a keystroke in the window
 }
