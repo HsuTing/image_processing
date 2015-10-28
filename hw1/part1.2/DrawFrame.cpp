@@ -16,7 +16,15 @@ DrawFrame::DrawFrame(Mat img) {
 }
 
 Mat DrawFrame::GetMat() {
-  return drawing;
+  return image;
+}
+
+Point DrawFrame::GetStart() {
+  return start;
+}
+
+Point DrawFrame::GetEnd() {
+  return end;
 }
 
 void DrawFrame::onMouse(int event, int x, int y, int flag, void* param) {

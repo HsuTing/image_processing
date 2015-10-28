@@ -9,6 +9,8 @@ class DrawFrame {
   public:
     DrawFrame(Mat img);
     Mat GetMat();
+    Point GetStart();
+    Point GetEnd();
 
   private:
     Mat image;

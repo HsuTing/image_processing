@@ -8,7 +8,7 @@ using namespace std;
 int main() {
   ReadImage part_one_one("data/test.jpg");
   DrawFrame part_one_two(part_one_one.GetMat());
-  Drawing part_one_three(part_one_two.GetMat());
+  Drawing part_one_three(part_one_two.GetMat(), part_one_two.GetStart(), part_one_two.GetEnd());
 
   return 0;
 }
