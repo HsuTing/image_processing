@@ -8,9 +8,8 @@ using namespace std;
 class ReadImage {
   public:
     ReadImage(string name);
-    void Show();
+    Mat GetMat();
 
   private:
-    string filename;
     Mat image;
 };
